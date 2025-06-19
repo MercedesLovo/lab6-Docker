@@ -1,0 +1,10 @@
+FROM python:3.11
+
+RUN pip install ipython nbformat
+
+WORKDIR /app
+
+COPY reduc-operation.ipynb /app/reduc-operation.ipynb
+
+CMD ["ipython", "/app/reduc-operation.ipynb", "10**5"]
+
